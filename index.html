@@ -1,0 +1,113 @@
+<html>
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta charset="UTF-8">
+	<title>
+		Δημιουργία συνθηματικού (password) για μικρά παιδιά
+	</title>
+	<script src="password.js"></script>
+	<link href="https://fonts.googleapis.com/css2?family=Roboto+Slab" rel="stylesheet"> 
+	<link href="https://fonts.googleapis.com/css2?family=Roboto" rel="stylesheet"> 
+	<style>
+*{
+	font-family: 'Roboto', serif;
+}
+#button {
+font-family: 'Roboto Slab';
+color: #fff !important;
+background: #ed3330;
+border-radius: 5px;
+display: inline-block;
+border: none;
+transition: all 0.4s ease 0s;
+}
+
+
+#button:hover {
+background: #434343;
+letter-spacing: 1px;
+transition: all 0.4s ease 0s;
+}
+
+.speech-bubble {
+	position: relative;
+	background: #00aabb;
+	border-radius: .4em;
+	height: 200px;
+	margin-left:250px;
+	margin-top: 20px;
+	padding: 10px;
+}
+
+.speech-bubble:after {
+	content: '';
+	position: absolute;
+	left: 0;
+	top: 50%;
+	width: 0;
+	height: 0;
+	border: 61px solid transparent;
+	border-right-color: #00aabb;
+	border-left: 0;
+	border-top: 0;
+	margin-top: -30.5px;
+	margin-left: -61px;
+
+}
+#synthimatiko{
+	margin-top:0.2em;
+	margin-bottom:0.2em;
+	font-family: 'Roboto Slab', serif;
+	border: 2px solid maroon;
+	padding:5px;
+	border-radius: 4px;
+	height: 2em;
+	font-size:1.5em;
+	width:12em;
+}
+#button{
+	display:block;
+	margin-top:0.2em;
+	margin-bottom:0.2em;
+	margin:auto;
+	width:12em;
+	border-radius: 4px;
+	height: 1.5em;
+	font-size: 1.2em;
+}
+#container{
+	width:555px;
+	height:500px;
+	padding-right:10px;
+}
+#correct{
+	margin-top:0.5em;
+	margin-bottom:0.5em;
+	font-family: 'Roboto Slab' serif;
+	font-size: 1.2em;
+	text-align:center;
+}
+</style>
+</head>
+<body onload="generatePassword();">
+<div id="container">
+	<img src="./robot4.png" style="position:absolute">
+<div class="speech-bubble">
+Μπορείς να χρησιμοποιήσεις το παρακάτω συνθηματικό:
+<input type="text" id="synthimatiko">
+H σωστή ορθογραφία είναι: <div id="correct"></div>
+<input id="button" class="btn btn-default cyan" type="submit" value="Νέο συνθηματικό" onclick="generatePassword();"/>
+</div>
+</div>
+<small>
+	Ιδέα από <a href="https://dinopass.com/" target="_blank">dinopass.com</a><br/>
+	Εικόνα από <a href="https://www.freepik.com/free-photos-vectors/character" target="_blank">Character vector created by freepik - www.freepik.com</a><br/>
+	Διάλογος από <a href="https://leaverou.github.io/bubbly/" target="_blank">Bubbly</a><br/>
+	Κουμπί από <a href="https://www.fabriziovanmarciano.com/button-styles/" target="_blank">Fabrizio Van Marciano</a><br/>
+	Λέξεις από <a href="https://blogs.sch.gr/5dimnik/%CE%B2-%CE%B3%CE%BB%CF%8E%CF%83%CF%83%CE%B1-link/" target="_blank">5ο Δημοτικό Σχολείο Νίκαιας</a><br/>
+	Υλοποίηση <a href="https://twitter.com/dnikolos" target="_blank">@dnikolos</a><br/>
+	github <a href="https://github.com/dimnikolos/grobotpass" target="_blank">dimnikolos/grobotpass</a>
+	
+</small>
+</body>
+</html>
