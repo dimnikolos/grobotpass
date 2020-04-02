@@ -83,21 +83,58 @@ transition: all 0.4s ease 0s;
 #correct{
 	margin-top:0.5em;
 	margin-bottom:0.5em;
-	font-family: 'Roboto Slab' serif;
+	font-family: 'Roboto Slab', serif;
 	font-size: 1.2em;
 	text-align:center;
+}
+#tocenter{
+	display: block;
+	margin: auto;
+	position:relative;
+	width: 555px;
+}
+#tip{
+	margin-top: 0.2em;
+	display:block;
+	font-size: 14px;
+	text-align:right;
+	text-decoration: underline;
+	cursor:pointer;
+}
+#tips{
+	display:none;
+	font-family:'Roboto', serif;
+	font-size: 0.9em;
+}
+#tips ul{
+	margin-top:-0.1em;
+	margin-bottom:10px;
 }
 </style>
 </head>
 <body onload="generatePassword();">
+<div id="tocenter">
 <div id="container">
 	<img src="./robot4.png" style="position:absolute">
-<div class="speech-bubble">
-Μπορείς να χρησιμοποιήσεις το παρακάτω συνθηματικό:
-<input type="text" id="synthimatiko">
-H σωστή ορθογραφία είναι: <div id="correct"></div>
-<input id="button" class="btn btn-default cyan" type="submit" value="Νέο συνθηματικό" onclick="generatePassword();"/>
+	<div class="speech-bubble">
+		<div id="normal">
+			Μπορείς να χρησιμοποιήσεις το παρακάτω συνθηματικό:
+			<input type="text" id="synthimatiko">
+			H σωστή ορθογραφία είναι: <div id="correct"></div>
+			<input id="button" class="btn btn-default cyan" type="submit" value="Νέο συνθηματικό" onclick="generatePassword();"/>
+			<div id="tip" onclick="tips();">Συμβουλές</div>
+		</div>
+		<div id="tips">
+			Να σου πω δυο συμβουλές;
+			<ul>
+				<li/>Μην δίνεις το συνθηματικό σου σε άλλους (μόνο σε μαμά, μπαμπά, κηδεμόνες). 
+				<li/>Καλό είναι παντού να γράφεις ελληνικά. Μόνο για το συνθηματικό σου μπορείς να χρησιμοποιήσεις ελληνικά με αγγλικούς χαρακτήρες (greeklish) επειδή πολλά συστήματα δεν δέχονται ελληνικά.
+			</ul>
+			<div id="tip" onclick="normal();">Συνθηματικά</div>
+		</div>
+			
 </div>
+
 </div>
 <small>
 	Ιδέα από <a href="https://dinopass.com/" target="_blank">dinopass.com</a><br/>
